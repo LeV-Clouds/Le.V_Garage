@@ -59,7 +59,7 @@ ESX.RegisterServerCallback('core:GetOwnedVeh', function(source, callback, Propri
     end)
 end)
 
-RegisterServerEvent("core:RenameVeh") -- Renommer
+RegisterServerEvent("core:RenameVeh") -- T UN FDP
 AddEventHandler("core:RenameVeh", function(Plaque, Nom)
     MySQL.Async.execute("UPDATE player_vehicles SET nom = @nom WHERE plaque = @plaque",{
         ['@nom'] = Nom,
