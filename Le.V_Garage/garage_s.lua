@@ -47,7 +47,7 @@ ESX.RegisterServerCallback('core:GetOwnedVeh', function(source, callback, Propri
                     MySQL.Async.execute("INSERT INTO player_vehicles (license, identite, propriete, plaque, etat, garage, rob) VALUES (@license, @identite, @propriete, @plaque, @etat, @garage, @rob);", {
                         ["@license"] = xPlayer.identifier, 
                         ["@propriete"] = prop, 
-                        ["@identite"] = v.nom .. " " .. v.prenom, -- Trigger votre identité
+                        ["@identite"] = v.firstname .. " " .. v.lastname, -- Trigger votre identité
                         ["@plaque"] = Plaque,
                         ["@etat"] = 1,
                         ["@garage"] = Garage,
